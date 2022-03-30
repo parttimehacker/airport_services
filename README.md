@@ -45,7 +45,6 @@ List the ready features here:
 - Contains examples of conversion from JSON raw data to Swift useable data structures
 - Very simple IOS application
 ## Screenshots
-Not applicable.
 ![Example screenshot](./ScreenShot.jpg)
 <!-- If you have screenshots you'd like to share, include them here. -->
 ## Architecture
