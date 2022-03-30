@@ -57,20 +57,19 @@ What are the project requirements/dependencies? Where are they listed? A require
 git clone https://github.com/parttimehacker/services_portal.git
 ```
 ## Usage
-You need to decide whether you want to manually run the application or have it started as part of the boot process. I recommend making a **Raspbian OS systemd service**, so the application starts when rebooted or controled by **systemctl** commands. The **systemd_script.sh** creates a admin directory in **/usr/local directory**. The application files are then copied to this new directory. The application will also require a log file in **/var/log directory** named asset.log.
-
+I recommend extracting code segments from the repository to prototype future mobile applications. 
 ## Implementation Status
-![Status](https://progress-bar.dev/80/?title=progress)
+![Status](https://progress-bar.dev/60/?title=progress)
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-- Further refactoring to more generalize the class
+- Further refactoring to more generalize the application
 To do:
-- Integrate into other DIYHA applications and repositories
-- Develop a new installation process for seperate repositories
+- Test the downloading and cloning of the repository to see if it works correctly?!?
 ## Acknowledgements
 Give credit here.
-- My "do it yourself home automation" system leverages the work from the Eclipse IOT Paho project. https://www.eclipse.org/paho/
+- The ACRIS Team!!!
 - Many thanks to...
+  - Humphrey and Bob
 ## Contact
 Created by [@parttimehacker](http://parttimehacker.io/) - feel free to contact me!
 ### Repository Stats
