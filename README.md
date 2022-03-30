@@ -68,8 +68,7 @@ To do:
 ## Acknowledgements
 Give credit here.
 - The ACRIS Team!!!
-- Many thanks to...
-  - Humphrey and Bob
+- Many thanks to... Humphrey and Bob!!!
 ## Contact
 Created by [@parttimehacker](http://parttimehacker.io/) - feel free to contact me!
 ### Repository Stats
