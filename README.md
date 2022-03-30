@@ -46,7 +46,7 @@ List the ready features here:
 - Very simple IOS application
 ## Screenshots
 Not applicable.
-<!-- ![Example screenshot](./diyhadiagram.png)-->
+![Example screenshot](./ScreenShot.jpg)
 <!-- If you have screenshots you'd like to share, include them here. -->
 ## Architecture
 ![Example screenshot](./diyhadiagram.png)
