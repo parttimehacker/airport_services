@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		F287936827F4B16B00DC1E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287936727F4B16B00DC1E15 /* AppDelegate.swift */; };
 		F287936A27F4B16B00DC1E15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287936927F4B16B00DC1E15 /* SceneDelegate.swift */; };
-		F287936C27F4B16B00DC1E15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287936B27F4B16B00DC1E15 /* ViewController.swift */; };
 		F287936F27F4B16B00DC1E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F287936D27F4B16B00DC1E15 /* Main.storyboard */; };
 		F287937127F4B16C00DC1E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F287937027F4B16C00DC1E15 /* Assets.xcassets */; };
 		F287937427F4B16C00DC1E15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F287937227F4B16C00DC1E15 /* LaunchScreen.storyboard */; };
 		F287937F27F4B16C00DC1E15 /* Services_PortalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287937E27F4B16C00DC1E15 /* Services_PortalTests.swift */; };
 		F287938927F4B16C00DC1E15 /* Services_PortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287938827F4B16C00DC1E15 /* Services_PortalUITests.swift */; };
 		F287938B27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287938A27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift */; };
+		F287939E27F4B9D600DC1E15 /* NetworkSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287939D27F4B9D600DC1E15 /* NetworkSingleton.swift */; };
+		F28793A027F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287939F27F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift */; };
+		F28793A327F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A227F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift */; };
+		F28793A527F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A427F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift */; };
+		F28793A727F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A627F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift */; };
+		F28793AD27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793AC27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift */; };
+		F28793AF27F4D38700DC1E15 /* VirtualQueueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793AE27F4D38700DC1E15 /* VirtualQueueTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,6 @@
 		F287936427F4B16B00DC1E15 /* Services Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Services Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F287936727F4B16B00DC1E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F287936927F4B16B00DC1E15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F287936B27F4B16B00DC1E15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F287936E27F4B16B00DC1E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F287937027F4B16C00DC1E15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F287937327F4B16C00DC1E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		F287938427F4B16C00DC1E15 /* Services PortalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Services PortalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F287938827F4B16C00DC1E15 /* Services_PortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_PortalUITests.swift; sourceTree = "<group>"; };
 		F287938A27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F287939D27F4B9D600DC1E15 /* NetworkSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSingleton.swift; sourceTree = "<group>"; };
+		F287939F27F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategoriesSingleton.swift; sourceTree = "<group>"; };
+		F28793A227F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyPrintJsonUtility.swift; sourceTree = "<group>"; };
+		F28793A427F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPortalUITableViewController.swift; sourceTree = "<group>"; };
+		F28793A627F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		F28793AC27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfferingSingleton.swift; sourceTree = "<group>"; };
+		F28793AE27F4D38700DC1E15 /* VirtualQueueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualQueueTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,15 @@
 		F287936627F4B16B00DC1E15 /* Services Portal */ = {
 			isa = PBXGroup;
 			children = (
-				F287936727F4B16B00DC1E15 /* AppDelegate.swift */,
-				F287936927F4B16B00DC1E15 /* SceneDelegate.swift */,
-				F287936B27F4B16B00DC1E15 /* ViewController.swift */,
-				F287936D27F4B16B00DC1E15 /* Main.storyboard */,
+				F287939927F4B22700DC1E15 /* Art */,
 				F287937027F4B16C00DC1E15 /* Assets.xcassets */,
-				F287937227F4B16C00DC1E15 /* LaunchScreen.storyboard */,
+				F287939827F4B21D00DC1E15 /* Controllers */,
+				F287939C27F4B24F00DC1E15 /* CRUD */,
 				F287937527F4B16C00DC1E15 /* Info.plist */,
+				F287939727F4B21400DC1E15 /* Main */,
+				F287939B27F4B24300DC1E15 /* Resources */,
+				F287939A27F4B22E00DC1E15 /* Singletons */,
+				F28793A127F4BA6B00DC1E15 /* Utilities */,
 			);
 			path = "Services Portal";
 			sourceTree = "<group>";
@@ -125,6 +139,66 @@
 				F287938A27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift */,
 			);
 			path = "Services PortalUITests";
+			sourceTree = "<group>";
+		};
+		F287939727F4B21400DC1E15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F287936727F4B16B00DC1E15 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F287939827F4B21D00DC1E15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F28793A427F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift */,
+				F28793A627F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift */,
+				F28793AE27F4D38700DC1E15 /* VirtualQueueTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F287939927F4B22700DC1E15 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		F287939A27F4B22E00DC1E15 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				F287939D27F4B9D600DC1E15 /* NetworkSingleton.swift */,
+				F287939F27F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift */,
+				F28793AC27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		F287939B27F4B24300DC1E15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F287937227F4B16C00DC1E15 /* LaunchScreen.storyboard */,
+				F287936D27F4B16B00DC1E15 /* Main.storyboard */,
+				F287936927F4B16B00DC1E15 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F287939C27F4B24F00DC1E15 /* CRUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CRUD;
+			sourceTree = "<group>";
+		};
+		F28793A127F4BA6B00DC1E15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F28793A227F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F287936C27F4B16B00DC1E15 /* ViewController.swift in Sources */,
+				F28793A327F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift in Sources */,
 				F287936827F4B16B00DC1E15 /* AppDelegate.swift in Sources */,
+				F28793A027F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift in Sources */,
+				F28793AF27F4D38700DC1E15 /* VirtualQueueTableViewController.swift in Sources */,
+				F28793A727F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift in Sources */,
+				F28793A527F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift in Sources */,
+				F28793AD27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift in Sources */,
+				F287939E27F4B9D600DC1E15 /* NetworkSingleton.swift in Sources */,
 				F287936A27F4B16B00DC1E15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
