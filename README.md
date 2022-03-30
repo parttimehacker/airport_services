@@ -4,9 +4,10 @@ Information to assist third party developers building mobile apps that leverage 
 ## Description: 
 This respository contains Apple XCODE project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -23,23 +24,24 @@ This respository contains Apple XCODE project artifacts (Swift), which illustrat
 <!-- * [License](#license) -->
 ## General Information
 - Provide general information about your project here.
-  - Sample code to a access a RESTful API.  
+  - Sample code used to a access an industry standard RESTful API.  
 - What problem does it (intend to) solve?
   - Code snipits can be used to accelerate development of mobile applications.
 - What is the purpose of your project?
-  - The goal was to help developers build mobile apps faster by reducing the learning curve.
+  - The goal was to help developers build mobile apps faster by reducing their learning curve.
 - Why did you undertake it?
   - ACRIS is an important informaiton sharing resource for the airport industry.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 ## Technologies Used
-- python=3.7.3
-- Adafruit-Blinka=7.1.0
-- paho-mqt=1.6.1
+- Xcode=13.3 
+- Swift=5.5
+- IOS=15.4
+- ACRIS-AGIM-Concessions-and-Seamless-Travel=2.0
 ## Features
 List the ready features here:
-- Handles the basic **diy/system/who** function
-- Reports on status and diagnostic information for the host raspberry pi server.
-- Code passes pylint with a score of 10.0
+- Illustrates two RESTfull interfaces
+- Contains examples of conversion from JSON raw data to Swift useable data structures
+- Very simple IOS application
 ## Screenshots
 Not applicable.
 <!-- ![Example screenshot](./diyhadiagram.png)-->
@@ -49,18 +51,9 @@ Not applicable.
 <!-- If you have screenshots you'd like to share, include them here. -->
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-- git clone the repository 
+- git clone the publi repository 
 ```
-git clone https://github.com/parttimehacker/diyha-asset.git
-cd diyha-asset
-```
-<div align="left">
-    <img src="assettree.png" width="200px"</img> 
-</div>
-
-- install dependencies
-```
-sudo pip3 install -r requirements.txt
+git clone https://github.com/parttimehacker/services_portal.git
 ```
 ## Usage
 You need to decide whether you want to manually run the application or have it started as part of the boot process. I recommend making a **Raspbian OS systemd service**, so the application starts when rebooted or controled by **systemctl** commands. The **systemd_script.sh** creates a admin directory in **/usr/local directory**. The application files are then copied to this new directory. The application will also require a log file in **/var/log directory** named asset.log.
