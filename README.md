@@ -2,7 +2,7 @@
 Information and sample code to assist third party developers when building mobile apps that use the ACRIS Airport Services Portal API
 
 ## Description: 
-This respository contains Apple Xcode project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. The sample project is a template for third parties developing applications wanting to advertise the use of an airport security checkpoing virtual queuing implementsion. The data inlcudes airport related information and several URLs to simplify access to an airports virtual queuing solution.
+This respository contains Apple Xcode project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. The sample project is a template for third parties developing applications wanting to advertise the use of an airport security checkpoint virtual queuing implementation. The data inlcudes airport related information and several URLs to simplify access to an airport's virtual queuing solution.
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
