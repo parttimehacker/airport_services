@@ -2,9 +2,11 @@
 Information to assist third party developers building mobile apps that leverage the ACRIS Airport Services Portal API.
 
 ## Description: 
-This respository contains an Apple XCODE project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. 
+This respository contains Apple XCODE project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
+![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -21,13 +23,13 @@ This respository contains an Apple XCODE project artifacts (Swift), which illust
 <!-- * [License](#license) -->
 ## General Information
 - Provide general information about your project here.
-  - This is one of several Python processes used in my home automation system (**DIYHA**). I've used OOP, MVC, and MTV concepts in my DIYHA system. 
+  - Sample code to a access a RESTful API.  
 - What problem does it (intend to) solve?
-  - I wanted to isolate the server information and status into a single process. The main python application subscribes to a **diy/system/who** topic and responds by turning on or off status updates.
+  - Code snipits can be used to accelerate development of mobile applications.
 - What is the purpose of your project?
-  - My home automation system contains environment sensors, motion sensors, LED clocks, light switches, emergency sirens, a django web server, interfaces to Adafruit.io and a mosquitto MQTT broker.
+  - The goal was to help developers build mobile apps faster by reducing the learning curve.
 - Why did you undertake it?
-  - This was a fun project to learn about python, Raspberry Pi, Arduino processors, hardware and more.
+  - ACRIS is an important informaiton sharing resource for the airport industry.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 ## Technologies Used
 - python=3.7.3
