@@ -1,5 +1,5 @@
 # Services Portal
-Information to assist third party developers building mobile apps that leverage the ACRIS Airport Services Portal API.
+Information and sampple code to assist third party developers when building mobile apps that leverage the ACRIS Airport Services Portal API.
 
 ## Description: 
 This respository contains Apple XCODE project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. 
