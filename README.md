@@ -40,6 +40,8 @@ This respository contains Apple XCODE project artifacts (Swift), which illustrat
 ## Features
 List the ready features here:
 - Illustrates two RESTfull interfaces
+  - airportservices/v2/airports/servicecategories
+  - airportservices/v2/airports/services/servicecategories/{service_category_id}
 - Contains examples of conversion from JSON raw data to Swift useable data structures
 - Very simple IOS application
 ## Screenshots
