@@ -2,7 +2,7 @@
 Information and sample code to assist third party developers when building mobile apps that use the ACRIS Airport Services Portal API
 
 ## Description: 
-This respository contains Apple XCODE project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. The sample project provides an example of applications needing to advertise the use of an airport security checkpoing virtual queuing implementsion. The data inlcudes airport related information and several URLs to simplify access to an airports virtual queuing solution.
+This respository contains Apple Xcode project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. The sample project is a template for third parties developing applications wanting to advertise the use of an airport security checkpoing virtual queuing implementsion. The data inlcudes airport related information and several URLs to simplify access to an airports virtual queuing solution.
 
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
@@ -67,49 +67,12 @@ sudo python3 asset.py --mq MQTTBROKERSERVER --lt LOCATIONTOPIC -ws DJANGOWEBSERV
 - MQTTBROKERSERVER is the host name or IP address of MQTT broker. I use the Open Source Mosquitto broker and bridge.
 - LOCATIONTOPIC is the MQTT topic name for the location of the server. 
 - DJANGOWEBSERVERis the host name or IP address of RESTful API web server. I use django to host my local DIYHAS web site.
-### Raspbian systemd Service
-First edit the **asset systemd service** and replace the MQTT broker, room values and django web server with their host names or IP addresse. A systemd install script will move files and enable the applicaiton via **systemctl** commands.
-- Run the script and provide the application name **asset** to setup systemd (the script uses a file name argument to create the service). 
-```
-vi asset.service
-./systemd_script.sh asset
-```
-This script also adds four aliases to the **.bash_aliases** in your home directory for convenience.
-```
-sudo systemctl start asset
-sudo systemctl stop asset
-sudo systemctl restart asset
-sudo systemctl -l status asset
-```
-- You will need to login or reload the **.bashrc** script to enable the alias entries. For example:
-```
-cd
-source .bashrc
-```
-### MQTT Topics and Messages
-The application subscribes to two MQTT topics and publishes six status messages. Three are are sent at initialization and then handled by a **diy/system/who** message. Three other messages are sent every 15 minutes after calculating an average. The first three are:
-```
-self.host = socket.gethostname()
-self.os_version_topic = "diy/" + self.host + "/os"
-self.pi_version_topic = "diy/" + self.host + "/pi"
-self.ip_address_topic = "diy/" + self.host + "/ip"
-```
-The timed messages are:
-```
-self.host = socket.gethostname()
-self.cpu_topic = "diy/" + self.host + "/cpu"
-self.celsius_topic = "diy/" + self.host + "/cpucelsius"
-self.disk_topic = "diy/" + self.host + "/disk"
-```
-- The **diy/system/who** sends local server information to the MQTT Broker. 
+
 ## Implementation Status
 ![Status](https://progress-bar.dev/80/?title=progress)
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
 - Further refactoring to more generalize the class
-
 To do:
 - Integrate into other DIYHA applications and repositories
 - Develop a new installation process for seperate repositories
@@ -117,8 +80,6 @@ To do:
 Give credit here.
 - My "do it yourself home automation" system leverages the work from the Eclipse IOT Paho project. https://www.eclipse.org/paho/
 - Many thanks to...
-- Adafruit supplies most of my hardware. http://www.adafruit.com
-- I use the PyCharm development environment https://www.jetbrains.com/pycharm/
 ## Contact
 Created by [@parttimehacker](http://parttimehacker.io/) - feel free to contact me!
 ### Repository Stats
