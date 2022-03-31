@@ -57,13 +57,15 @@ What are the project requirements/dependencies? Where are they listed? A require
 git clone https://github.com/parttimehacker/services_portal.git
 ```
 ## Usage
-I recommend extracting code segments from the repository to prototype future mobile applications. 
+I recommend extracting code segments from the repository to prototype future mobile applications. The most important code examples are the interface classes that extract JSON data from the ACRIS API.
+- NetworkSingleton.swift
+- ServiceCategoriesSingleton.swift
+- ServiceOfferingSingleton.swift
 ## Implementation Status
 ![Status](https://progress-bar.dev/60/?title=progress)
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 - Further refactoring to more generalize the application
-To do:
 - Test the downloading and cloning of the repository to see if it works correctly?!?
 ## Acknowledgements
 Give credit here.
