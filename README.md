@@ -24,7 +24,7 @@ This respository contains Apple Xcode project artifacts (Swift), which illustrat
 <!-- * [License](#license) -->
 ## General Information
 - Provide general information about your project here.
-  - Sample code used to a access an industry standard RESTful API.  
+  - Sample code used to access an industry standard RESTful API.  
 - What problem does it (intend to) solve?
   - Code snipits can be used to accelerate development of mobile applications.
 - What is the purpose of your project?
