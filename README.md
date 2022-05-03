@@ -39,7 +39,7 @@ This respository contains Apple Xcode project artifacts (Swift), which illustrat
 - ACRIS-AGIM-Concessions-and-Seamless-Travel=2.0
 ## Features
 List the ready features here:
-- Illustrates two RESTfull interfaces
+- Illustrates three RESTfull interfaces
   - airportservices/v2/airports/servicecategories
   - airportservices/v2/airports/services/servicecategories/{service_category_id}
   - airportservices/v2/references/airports/{iata_code}/queues
