@@ -12,7 +12,7 @@ class ServiceCategoriesSingleton: NSObject {
     static let sharedSingleton = ServiceCategoriesSingleton()
     
     let network = NetworkSingleton.sharedSingleton
-    let util = PrettyPrintJsonUtility.sharedSingleton
+    let util = UtilitySingleton.sharedSingleton
     
     enum Search {
         case id, code, name, description

@@ -12,7 +12,7 @@ class ServiceOfferingSingleton: NSObject {
     static let sharedSingleton = ServiceOfferingSingleton()
     
     let network = NetworkSingleton.sharedSingleton
-    let util = PrettyPrintJsonUtility.sharedSingleton
+    let util = UtilitySingleton.sharedSingleton
     
     enum Search {
         case id, title, description
@@ -39,6 +39,7 @@ class ServiceOfferingSingleton: NSObject {
     struct OperationHoursInfo : Codable {
         var operating_hours:    String?
         var osm_format:         String?
+        var schema_format:      String?
     }
     
     struct AirportCategoryInfo : Codable {
@@ -60,6 +61,7 @@ class ServiceOfferingSingleton: NSObject {
     }
     
     var array:             [AirportCategoryInfo] = []
+    var clone:             [AirportCategoryInfo] = []
     
     override private init() {
         super.init()
@@ -98,6 +100,14 @@ class ServiceOfferingSingleton: NSObject {
             }
         }
         return -1
+    }
+    
+    func swapClone(restore: Bool) {
+        if restore {
+            array = clone
+        } else {
+            clone = array
+        }
     }
     
     func find( key:String, search:Search ) -> Int {

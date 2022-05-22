@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F24DF78A2821871B000C0E0A /* QueueSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24DF7892821871B000C0E0A /* QueueSingleton.swift */; };
+		F2810A6B283802090035FF76 /* ServiceDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2810A6A283802090035FF76 /* ServiceDetailsTableViewController.swift */; };
 		F287936827F4B16B00DC1E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287936727F4B16B00DC1E15 /* AppDelegate.swift */; };
 		F287936A27F4B16B00DC1E15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287936927F4B16B00DC1E15 /* SceneDelegate.swift */; };
 		F287936F27F4B16B00DC1E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F287936D27F4B16B00DC1E15 /* Main.storyboard */; };
@@ -17,11 +19,19 @@
 		F287938B27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287938A27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift */; };
 		F287939E27F4B9D600DC1E15 /* NetworkSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287939D27F4B9D600DC1E15 /* NetworkSingleton.swift */; };
 		F28793A027F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287939F27F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift */; };
-		F28793A327F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A227F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift */; };
+		F28793A327F4BABF00DC1E15 /* UtilitySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A227F4BABF00DC1E15 /* UtilitySingleton.swift */; };
 		F28793A527F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A427F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift */; };
 		F28793A727F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793A627F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift */; };
 		F28793AD27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793AC27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift */; };
 		F28793AF27F4D38700DC1E15 /* VirtualQueueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28793AE27F4D38700DC1E15 /* VirtualQueueTableViewController.swift */; };
+		F2CB4204283924C600156569 /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB4203283924C600156569 /* WebBrowserViewController.swift */; };
+		F2CB42062839283E00156569 /* QueueDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CB42052839283E00156569 /* QueueDetailsTableViewController.swift */; };
+		F2CB420D283A87AA00156569 /* AirportCapture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2CB4207283A87AA00156569 /* AirportCapture.jpg */; };
+		F2CB420E283A87AA00156569 /* AirportCapture80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2CB4208283A87AA00156569 /* AirportCapture80.jpg */; };
+		F2CB420F283A87AA00156569 /* AirportCaptureStore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2CB4209283A87AA00156569 /* AirportCaptureStore.jpg */; };
+		F2CB4210283A87AA00156569 /* AirportCapture40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2CB420A283A87AA00156569 /* AirportCapture40.jpg */; };
+		F2CB4211283A87AA00156569 /* AirportCapture58.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2CB420B283A87AA00156569 /* AirportCapture58.jpg */; };
+		F2CB4212283A87AA00156569 /* AirportCapture120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2CB420C283A87AA00156569 /* AirportCapture120.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F24DF7892821871B000C0E0A /* QueueSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueSingleton.swift; sourceTree = "<group>"; };
+		F2810A6A283802090035FF76 /* ServiceDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsTableViewController.swift; sourceTree = "<group>"; };
 		F287936427F4B16B00DC1E15 /* Services Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Services Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F287936727F4B16B00DC1E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F287936927F4B16B00DC1E15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,11 +68,19 @@
 		F287938A27F4B16C00DC1E15 /* Services_PortalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_PortalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F287939D27F4B9D600DC1E15 /* NetworkSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSingleton.swift; sourceTree = "<group>"; };
 		F287939F27F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategoriesSingleton.swift; sourceTree = "<group>"; };
-		F28793A227F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyPrintJsonUtility.swift; sourceTree = "<group>"; };
+		F28793A227F4BABF00DC1E15 /* UtilitySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitySingleton.swift; sourceTree = "<group>"; };
 		F28793A427F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPortalUITableViewController.swift; sourceTree = "<group>"; };
 		F28793A627F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		F28793AC27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfferingSingleton.swift; sourceTree = "<group>"; };
 		F28793AE27F4D38700DC1E15 /* VirtualQueueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualQueueTableViewController.swift; sourceTree = "<group>"; };
+		F2CB4203283924C600156569 /* WebBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
+		F2CB42052839283E00156569 /* QueueDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueDetailsTableViewController.swift; sourceTree = "<group>"; };
+		F2CB4207283A87AA00156569 /* AirportCapture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AirportCapture.jpg; path = "App Store/AirportCapture.jpg"; sourceTree = SOURCE_ROOT; };
+		F2CB4208283A87AA00156569 /* AirportCapture80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AirportCapture80.jpg; path = "App Store/AirportCapture80.jpg"; sourceTree = SOURCE_ROOT; };
+		F2CB4209283A87AA00156569 /* AirportCaptureStore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AirportCaptureStore.jpg; path = "App Store/AirportCaptureStore.jpg"; sourceTree = SOURCE_ROOT; };
+		F2CB420A283A87AA00156569 /* AirportCapture40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AirportCapture40.jpg; path = "App Store/AirportCapture40.jpg"; sourceTree = SOURCE_ROOT; };
+		F2CB420B283A87AA00156569 /* AirportCapture58.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AirportCapture58.jpg; path = "App Store/AirportCapture58.jpg"; sourceTree = SOURCE_ROOT; };
+		F2CB420C283A87AA00156569 /* AirportCapture120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AirportCapture120.jpg; path = "App Store/AirportCapture120.jpg"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +182,12 @@
 		F287939927F4B22700DC1E15 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				F2CB4207283A87AA00156569 /* AirportCapture.jpg */,
+				F2CB420A283A87AA00156569 /* AirportCapture40.jpg */,
+				F2CB420B283A87AA00156569 /* AirportCapture58.jpg */,
+				F2CB4208283A87AA00156569 /* AirportCapture80.jpg */,
+				F2CB420C283A87AA00156569 /* AirportCapture120.jpg */,
+				F2CB4209283A87AA00156569 /* AirportCaptureStore.jpg */,
 			);
 			path = Art;
 			sourceTree = "<group>";
@@ -172,6 +198,7 @@
 				F287939D27F4B9D600DC1E15 /* NetworkSingleton.swift */,
 				F287939F27F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift */,
 				F28793AC27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift */,
+				F24DF7892821871B000C0E0A /* QueueSingleton.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -189,6 +216,9 @@
 		F287939C27F4B24F00DC1E15 /* CRUD */ = {
 			isa = PBXGroup;
 			children = (
+				F2810A6A283802090035FF76 /* ServiceDetailsTableViewController.swift */,
+				F2CB4203283924C600156569 /* WebBrowserViewController.swift */,
+				F2CB42052839283E00156569 /* QueueDetailsTableViewController.swift */,
 			);
 			path = CRUD;
 			sourceTree = "<group>";
@@ -196,7 +226,7 @@
 		F28793A127F4BA6B00DC1E15 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F28793A227F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift */,
+				F28793A227F4BABF00DC1E15 /* UtilitySingleton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -305,9 +335,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CB420E283A87AA00156569 /* AirportCapture80.jpg in Resources */,
 				F287937427F4B16C00DC1E15 /* LaunchScreen.storyboard in Resources */,
+				F2CB4210283A87AA00156569 /* AirportCapture40.jpg in Resources */,
 				F287937127F4B16C00DC1E15 /* Assets.xcassets in Resources */,
+				F2CB420D283A87AA00156569 /* AirportCapture.jpg in Resources */,
+				F2CB4211283A87AA00156569 /* AirportCapture58.jpg in Resources */,
+				F2CB420F283A87AA00156569 /* AirportCaptureStore.jpg in Resources */,
 				F287936F27F4B16B00DC1E15 /* Main.storyboard in Resources */,
+				F2CB4212283A87AA00156569 /* AirportCapture120.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,13 +368,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28793A327F4BABF00DC1E15 /* PrettyPrintJsonUtility.swift in Sources */,
+				F2810A6B283802090035FF76 /* ServiceDetailsTableViewController.swift in Sources */,
+				F28793A327F4BABF00DC1E15 /* UtilitySingleton.swift in Sources */,
+				F2CB4204283924C600156569 /* WebBrowserViewController.swift in Sources */,
 				F287936827F4B16B00DC1E15 /* AppDelegate.swift in Sources */,
 				F28793A027F4BA3500DC1E15 /* ServiceCategoriesSingleton.swift in Sources */,
 				F28793AF27F4D38700DC1E15 /* VirtualQueueTableViewController.swift in Sources */,
 				F28793A727F4BBAA00DC1E15 /* ServicesCategoriesTableViewController.swift in Sources */,
+				F24DF78A2821871B000C0E0A /* QueueSingleton.swift in Sources */,
 				F28793A527F4BB8F00DC1E15 /* ServicesPortalUITableViewController.swift in Sources */,
 				F28793AD27F4D29E00DC1E15 /* ServiceOfferingSingleton.swift in Sources */,
+				F2CB42062839283E00156569 /* QueueDetailsTableViewController.swift in Sources */,
 				F287939E27F4B9D600DC1E15 /* NetworkSingleton.swift in Sources */,
 				F287936A27F4B16B00DC1E15 /* SceneDelegate.swift in Sources */,
 			);
@@ -446,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -523,6 +563,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -534,7 +575,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -551,6 +592,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,7 +604,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

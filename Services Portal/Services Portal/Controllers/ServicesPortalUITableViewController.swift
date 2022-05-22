@@ -9,12 +9,14 @@ import UIKit
 
 class ServicesPortalUITableViewController: UITableViewController {
     
-    let sections = 2
+    let sections = 3
     let categoryData = [
         ["BoldCell", "airportservices/v2/airports/servicecategories"],
         ["RegularCell", "Request a list of all service categories. Display types and codes per category."],
         ["BoldCell", "airportservices/v2/airports/services/servicecategories/{service_category_id}"],
-        ["RegularCell", "Request a list of airports that provide virtual queueing to passengers."]
+        ["RegularCell", "Request a list of airports that provide virtual queueing to passengers. The category Id obtained from API#1 JSON."],
+        ["BoldCell", "airportservices/v2/references/airports/{iata_code}/queues"],
+        ["RegularCell", "Request a list of checkpoints and type of queues by airport IATA code."]
     ]
 
     override func viewDidLoad() {
@@ -31,17 +33,42 @@ class ServicesPortalUITableViewController: UITableViewController {
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
+        
+        overrideUserInterfaceStyle = .light
     }
 
     // MARK: - Table view data source
+    
+    // UITableViewAutomaticDimension calculates height of label contents/text
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Swift 4.2 onwards
+        return UITableView.automaticDimension
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return sections
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let headerView = view as? UITableViewHeaderFooterView else { return }
+        headerView.textLabel!.font = UIFont.boldSystemFont(ofSize: 17)
+        headerView.textLabel!.textColor = UIColor.black
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
+    }
+  
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "ACRIS Airport Services Portal API: #" + String(section+1)
+        let header = section + 1
+        let headerName = "Airport Services Portal API#" + String(header)
+        // print(headerName)
+        return headerName
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,6 +80,8 @@ class ServicesPortalUITableViewController: UITableViewController {
         let cellString = categoryData[(indexPath.section*2)+indexPath.row][0]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellString, for: indexPath)
         let itemString = categoryData[(indexPath.section*2) + indexPath.row][1]
+        print(cellString)
+        print(indexPath)
         (cell.contentView.viewWithTag(100) as! UILabel).text = itemString
         return cell
     }

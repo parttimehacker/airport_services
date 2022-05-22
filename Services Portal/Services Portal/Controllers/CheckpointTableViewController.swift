@@ -1,30 +1,27 @@
 //
-//  VirtualQueueTableViewController.swift
+//  CheckpointTableViewController.swift
 //  Services Portal
 //
-//  Created by David Wilson on 3/30/22.
+//  Created by David Wilson on 5/3/22.
 //
 
 import UIKit
 
-class VirtualQueueTableViewController: UITableViewController {
-    
+class CheckpointTableViewController: UITableViewController {
+
     let network = NetworkSingleton.sharedSingleton
     let categories = ServiceCategoriesSingleton.sharedSingleton
     let offerings = ServiceOfferingSingleton.sharedSingleton
-    let utility = UtilitySingleton.sharedSingleton
     
     @IBOutlet var typeLabel : UILabel?
     @IBOutlet var categoryLabel : UILabel?
 
     let nc = NotificationCenter.default // Note that default is now a property, not a method call
-    let networkSuccessNotification:Notification.Name = Notification.Name("VQSCNetworkSuccessNotification")
-    let networkFailureNotification:Notification.Name = Notification.Name("VQSCNetworkFailureNotification")
+    let networkSuccessNotification:Notification.Name = Notification.Name("QueueNetworkSuccessNotification")
+    let networkFailureNotification:Notification.Name = Notification.Name("QueueNetworkFailureNotification")
     
-    let defaultServiceOfferingUrl : String = "airportservices/v2/airports/servicecategories/"
-    let defaultVqOfferingUrl : String = "airportservices/v2/airports/services/servicecategories/{service_category_id}/"
-    var vqServiceOfferingUrl : String = ""
-    var vqId : String = ""
+    let defaultUrl : String = "/airportservices/v2/references/airports/{iata_code}/queues/"
+    var queueRequestUrl : String = ""
     
     // State machine used to download categories; search for vq code; and request service offering based on discovered vq code; 0 or 1
     
@@ -58,7 +55,7 @@ class VirtualQueueTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
         
-        overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .dark
         
         nc.addObserver(forName: networkSuccessNotification, object: nil, queue: nil, using: catchSuccessNotification)
         nc.addObserver(forName: networkFailureNotification, object: nil, queue: nil, using: catchFailureNotification)
@@ -67,7 +64,7 @@ class VirtualQueueTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         stateMachine = 0
-        network.httpsGetRawDataInfoPropertyList(uri: defaultServiceOfferingUrl,
+        network.httpsGetRawDataInfoPropertyList(uri: queueRequestUrl,
                                                      successNotif: networkSuccessNotification,
                                                      failureNotif: networkFailureNotification)
     }
@@ -97,8 +94,8 @@ class VirtualQueueTableViewController: UITableViewController {
                     if self.categories.array[i].code == "VQ" {
                         found = true
                         self.stateMachine = 1
-                        self.vqId = String(self.categories.array[i].id!)
-                        let url = self.appendCategoryId(uri: self.defaultVqOfferingUrl, code: self.vqId)
+                        let vqId:String = String(self.categories.array[i].id!)
+                        let url = self.appendCategoryId(uri: self.defaultVqOfferingUrl, code: vqId)
                         self.network.httpsGetRawDataInfoPropertyList(uri: url,
                                                                      successNotif: self.networkSuccessNotification,
                                                                      failureNotif: self.networkFailureNotification)
@@ -123,42 +120,36 @@ class VirtualQueueTableViewController: UITableViewController {
         }
     }
 
+
     // MARK: - Table view data source
 
-    // UITableViewAutomaticDimension calculates height of label contents/text
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Swift 4.2 onwards
-        return UITableView.automaticDimension
-    }
-
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
-/*
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Airport Virtual Queues"
-    }
-*/
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        offerings.array.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
-    
+
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VQCell", for: indexPath)
-        (cell.contentView.viewWithTag(100) as! UILabel).text = offerings.array[indexPath.row].airport?.name
-        (cell.contentView.viewWithTag(110) as! UILabel).text = offerings.array[indexPath.row].airport?.iata_code
-        (cell.contentView.viewWithTag(120) as! UILabel).text = offerings.array[indexPath.row].airport?.icao_code
-        (cell.contentView.viewWithTag(130) as! UILabel).text = offerings.array[indexPath.row].operating_hours?.operating_hours
-        (cell.contentView.viewWithTag(140) as! UILabel).text = offerings.array[indexPath.row].title
-        (cell.contentView.viewWithTag(150) as! UILabel).text = offerings.array[indexPath.row].subtitle
-        let linkText = utility.appendColored(text: offerings.array[indexPath.row].description!, colorText: " [Details]", color: UIColor.systemBlue)
-        (cell.contentView.viewWithTag(160) as! UILabel).attributedText  = linkText
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
+    */
+
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
 
     /*
     // Override to support editing the table view.
@@ -187,15 +178,14 @@ class VirtualQueueTableViewController: UITableViewController {
     }
     */
 
-     // MARK: - Navigation
+    /*
+    // MARK: - Navigation
 
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "DetailVqSegue" {
-             let tvc = segue.destination as! ServiceDetailsTableViewController
-             let indexPath = tableView.indexPathForSelectedRow
-             tvc.iataCode = offerings.array[indexPath!.row].airport?.iata_code
-             tvc.categoryCode = vqId
-         }
-     }
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

@@ -7,9 +7,15 @@
 
 import UIKit
 
-class PrettyPrintJsonUtility: NSObject {
+class UtilitySingleton: NSObject {
 
-    static let sharedSingleton = PrettyPrintJsonUtility()
+    static let sharedSingleton = UtilitySingleton()
+    
+    func constructUri(baseUri:String, pattern:String, newString:String ) -> String {
+        let uri = baseUri
+        let replaced = uri.replacingOccurrences(of: pattern, with: newString)
+        return replaced
+    }
     
     func indentScope(i: Int, s: String) -> String {
         var os: String = s
@@ -17,6 +23,23 @@ class PrettyPrintJsonUtility: NSObject {
             os.append("  ")
         }
         return os
+    }
+    
+    func numbericSpellout( value: Int ) -> String {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        formatter.numberStyle = .spellOut
+        let formattedString : String = formatter.string(from: NSNumber(value: value))!
+        return formattedString
+    }
+    
+    func appendColored( text: String, colorText: String, color: UIColor) -> NSMutableAttributedString {
+        let attributsBold = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: .bold), NSAttributedString.Key.foregroundColor: color]
+        let attributsNormal = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: .regular)]
+        let normal = NSMutableAttributedString(string: text, attributes:attributsNormal)
+        let hightlighted = NSMutableAttributedString(string: colorText, attributes:attributsBold)
+        normal.append(hightlighted)
+        return normal
     }
     
     func prettyPrintJSON( json: String) -> String {
