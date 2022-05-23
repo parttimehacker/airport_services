@@ -132,7 +132,7 @@ class QueueDetailsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if noCheckpoints {
-            return "No Checkpoints Idenfied"
+            return "No Checkpoints Identified"
         } else {
             return queues.checkpointQueues[section].name
         }

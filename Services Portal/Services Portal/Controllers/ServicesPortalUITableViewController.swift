@@ -9,13 +9,15 @@ import UIKit
 
 class ServicesPortalUITableViewController: UITableViewController {
     
-    let sections = 3
+    let sections = 4
     let categoryData = [
-        ["BoldCell", "airportservices/v2/airports/servicecategories"],
+        ["BoldCell", "airportservices/v2/airports/servicecategories/"],
         ["RegularCell", "Request a list of all service categories. Display types and codes per category."],
-        ["BoldCell", "airportservices/v2/airports/services/servicecategories/{service_category_id}"],
+        ["BoldCell", "airportservices/v2/airports/services/servicecategories/{service_category_id}/"],
         ["RegularCell", "Request a list of airports that provide virtual queueing to passengers. The category Id obtained from API#1 JSON."],
-        ["BoldCell", "airportservices/v2/references/airports/{iata_code}/queues"],
+        ["BoldCell", "airportservices/v2/airports/{airport_code}/services/servicecategories/{service_category_id}/"],
+        ["RegularCell", "Request details on an airport's virtual queueing service offering. The IATA codes are obtained from API#2 and category Id obtained from API#1."],
+        ["BoldCell", "airportservices/v2/references/airports/{iata_code}/queues/"],
         ["RegularCell", "Request a list of checkpoints and type of queues by airport IATA code."]
     ]
 
