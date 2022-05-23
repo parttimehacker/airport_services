@@ -1,5 +1,5 @@
 # Services Portal
-Information and sample code to assist third party developers when building mobile apps that use the ACRIS Airport Services Portal API
+Information and sample code to assist third party developers when building mobile apps that use the ACRIS Airport Services API Portal
 
 ## Description: 
 This respository contains Apple Xcode project artifacts (Swift), which illustrate basic use of information from the ACI-World ACRIS Airport Services Portal. The sample project is a template for third parties developing applications wanting to advertise the use of an airport security checkpoint virtual queuing implementation. The data inlcudes airport related information and several URLs to simplify access to an airport's virtual queuing solution.
@@ -35,14 +35,15 @@ This respository contains Apple Xcode project artifacts (Swift), which illustrat
 ## Technologies Used
 - Xcode=13.3 
 - Swift=5.5
-- IOS=15.4
+- IOS=15.5
 - ACRIS-AGIM-Concessions-and-Seamless-Travel=2.0
 ## Features
 List the ready features here:
-- Illustrates three RESTfull interfaces
-  - airportservices/v2/airports/servicecategories
-  - airportservices/v2/airports/services/servicecategories/{service_category_id}
-  - airportservices/v2/references/airports/{iata_code}/queues
+- Illustrates four RESTfull interfaces
+  - airportservices/v2/airports/servicecategories/
+  - airportservices/v2/airports/services/servicecategories/{service_category_id}/
+  - airportservices/v2/airports/{airport_code}/services/servicecategories/{service_category_id}/
+  - airportservices/v2/references/airports/{iata_code}/queues/
 - Contains examples of conversion from JSON raw data to Swift useable data structures
 - Very simple IOS application
 ## Screenshots
